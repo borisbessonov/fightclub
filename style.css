@@ -1,0 +1,351 @@
+.html {
+    overflow-x: hidden; /* скрыть горизонтальный скролл */
+    overflow-y: scroll; /* вертикальный скролл оставить */   
+}
+
+.special-elite-regular {
+    font-family: "Special Elite", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.anton-regular {
+font-family: "Anton", sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+
+body {
+    height: 800vh;
+    margin: 0;
+    background-color: #000;
+    font-family: "Special Elite", system-ui;
+    overflow-x: hidden; /* скрыть горизонтальный скролл */
+    overflow-y: scroll; /* вертикальный скролл оставить */   
+}
+
+canvas { 
+    display: block; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    pointer-events: none;
+  }
+
+.glitch-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 20;
+}
+
+/* It's only after we've lost everything that we're free to do anything */
+
+.title-1 {
+    position: fixed;
+    width: 475px;
+    height: 360px;
+    left: 4%;
+    top: 42%;
+    font-family: 'Anton';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 95%;
+    /* or 72px */
+    letter-spacing: -0.03em;
+    color: #DDDDE7;
+    /* text-shadow: 5px 4px 0px rgba(240, 54, 130, 0.4); */
+    z-index: 20px;
+}
+
+.title-2 {
+    position: fixed;
+    width: 475px;
+    height: 360px;
+    left: 6%;
+    top: 0%;
+    font-family: 'Anton';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 95%;
+    /* or 72px */
+    letter-spacing: -0.03em;
+    color: #DDDDE7;
+    /* text-shadow: 5px 4px 0px rgba(240, 54, 130, 0.4); */
+    z-index: 20px;
+}
+
+.movie-data, .fincher, .palahniuk {
+    /* 1999 18+ 2h 19m */
+    position: fixed;
+    font-family: 'Special Elite';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: -0.03em;
+    text-decoration-line: none;
+    color: #DDDDE7;
+}
+
+.movie-data{
+    
+    width: 80px;
+    height: 48px;
+    left: 6%;
+    bottom: 73px;
+}
+
+.fincher{
+    width: 51px;
+    height: 48px;
+    left: 10%;
+    bottom: 73px;
+}
+
+.palahniuk{
+    width: 51px;
+    height: 48px;
+    left: 16%;
+    bottom: 73px;
+}
+
+.screencast_1-img {
+    position: fixed;
+width: 255px;
+height: 151px;
+right: 17.4%;
+top: 100px;
+background: url(/images/screencast_1.jpg);
+}
+
+
+.quote-1, .quote-2 {
+    /* I found freedom. Losing all hope was freedom */
+    position: fixed;
+font-family: 'Special Elite';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 16px;
+top: 280px;
+letter-spacing: -0.03em;
+color: #DDDDE7;
+}
+
+.quote-1 {
+    width: 142px;
+    height: 48px;
+    right: 23.3%;
+}
+
+.quote-2 {
+    width: 220px;
+    height: 48px;
+    right: 11%;
+}
+
+.screencast_1-img, .titles-img {
+    background-color: #000;
+}
+
+.titles-img {
+    position: fixed;
+    width: 365px;
+    height: 243px;
+    right: 11.5%;
+    top: 64%;
+    background: url(/images/titles.png);
+    border: none;
+}
+
+/* Добавьте эти стили в ваш CSS */
+.tape-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 10;
+    pointer-events: none;
+    transition: opacity 0.5s ease-out;
+}
+
+
+#tape-cover, #tape {
+    position: absolute;
+    top: 50%;
+    left: 51%;
+    width: 480px;
+    height: 800px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translate(-50%, -50%);
+    will-change: transform;
+}
+
+#tape-cover {
+    background-image: url("images/tape_cover.png");
+    z-index: 20;
+}
+
+#tape {
+    background-image: url("images/tape.png");
+    z-index: 19;
+}
+
+.first-rule-is {
+    color: rgb(255, 255, 255);
+    position: fixed;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%); /* Центрирование */
+    letter-spacing: -0.5px;
+    font-size: 48px;
+    line-height: 1;
+    width: 480px;
+    opacity: 0;
+    text-align: center;
+    pointer-events: none;
+    transition: opacity 2.8s ease;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* Для лучшей читаемости */
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+
+.answer-button {
+    position: fixed;
+    left: 50%;
+    top: 52%; /* Под текстом first-rule-is */
+    transform: translateX(-50%);
+    padding: 12px 30px;
+    font-family: "Special Elite", system-ui;
+    font-size: 24px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid white;
+    border-radius: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 10; /* Такой же как у first-rule-is */
+    transition: opacity 1s ease, transform 0.3s ease;
+    pointer-events: none;
+}
+
+.answer-button.visible {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.answer-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateX(-50%) scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* VHS эффект */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(rgba(119, 80, 80, 0) 50%, 
+        rgba(0, 0, 0, 0.25) 50%),
+        linear-gradient(90deg, 
+        rgba(255, 0, 0, 0.06), 
+        rgba(0, 255, 0, 0.02), 
+        rgba(0, 0, 255, 0.06));
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+    z-index: 1000;
+    mix-blend-mode: overlay;
+    animation: vhs-static 0.52s infinite alternate;
+}
+
+@keyframes vhs-static {
+    from { background-size: 100% 2px, 3px 100%; }
+    to { background-size: 100% 4px, 6px 100%; }
+}
+
+.hidden-frame {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw; /* Занимает 80% ширины экрана */
+    height: 80vh; /* Занимает 80% высоты экрана */
+    max-width: 800px; /* Максимальный размер */
+    max-height: 800px;
+    z-index: 10000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.05s;
+    display: none;
+    object-fit: contain; /* Сохраняет пропорции изображения */
+    filter: grayscale(100%) contrast(120%) brightness(80%);
+  }
+  
+  .hidden-frame.visible {
+    display: block;
+    opacity: 1;
+  }
+
+
+  .vhs-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+      /* Статический шум */
+      repeating-linear-gradient(0deg, 
+        rgba(0, 0, 0, 0.3), 
+        rgba(0, 0, 0, 0.3) 1px, 
+        transparent 1px, 
+        transparent 2px),
+      /* Цветные помехи */
+      repeating-linear-gradient(90deg, 
+        rgba(255, 0, 0, 0.05), 
+        rgba(0, 255, 0, 0.05), 
+        rgba(0, 0, 255, 0.05));
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+    transition: opacity 0.5s linear;
+  }
+  
+  .vhs-overlay.active {
+    pointer-events: all;
+  }
+
